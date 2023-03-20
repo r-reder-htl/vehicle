@@ -13,7 +13,7 @@ This project consists of 3 parts:
 
 The backend server must be compiled and deployed to your github container registry. 
 
-Before building you must follow the steps in [readme.md](k8s/k8s/readme.md) in the k8s folder to change the deployment target to your ghcr.io repository on github.
+Before building you must follow the steps in [readme.md](./k8s/readme.md) in the k8s folder to change the deployment target to your ghcr.io repository on github.
 
 Then run
 ```bash
@@ -53,7 +53,7 @@ Now you can start docker with:
 ~~~bash
 sudo service docker start
 ~~~
-There is a script [./k8s/install-kube.sh](k8s/k8s/install-kube.sh) to install minikube and kubectl on Ubuntu.
+There is a script [./k8s/install-kube.sh](./k8s/install-kube.sh) to install minikube and kubectl on Ubuntu.
 
 After that start minikube and check that minikube is ready:
 ~~~bash
@@ -71,7 +71,7 @@ And then continue using the instructions for linux.
 
 
 # Docker-Desktop instead of minikube
-Docker-Desktop can be used instead of minikube and portman. In that case kubernetes must be enabled in Docker-Desktop and then the standard storage class must be installed with [docker-standard-storage-class.yaml](k8s/k8s/docker-desktop/docker-standard-storage-class.yaml):  
+Docker-Desktop can be used instead of minikube and portman. In that case kubernetes must be enabled in Docker-Desktop and then the standard storage class must be installed with [docker-standard-storage-class.yaml](./k8s/docker-desktop/docker-standard-storage-class.yaml):  
 
 ~~~bash
 kubectl apply -f k8s/docker-desktop/docker-standard-storage-class.yaml
